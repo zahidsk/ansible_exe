@@ -1,0 +1,13 @@
+---
+- hosts: calsoft
+  become: true
+  tasks:
+    - name: "set ip of system"
+      setip:
+        settype: static
+        ip: 192.168.56.10
+        netmask: 255.255.255.0
+        gateway: 172.17.175.1
+      register: result   
+    - debug: var=result
+...

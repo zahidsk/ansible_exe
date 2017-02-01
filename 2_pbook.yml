@@ -1,0 +1,17 @@
+---
+- hosts: calsoft
+  remote_user: shaikhzahid
+  vars:
+    uname: 'zahid'
+  tasks:
+    - name: "copy file {{ uname }} "
+      copy:
+        src: ~/wait_ansible.py
+        dest: ~/sk/
+    - name: command ls
+      command: /bin/ls
+    - name: Command run
+      command: /bin/echo  welcome to Ansible
+    - name: time print
+      timeprin: time =March 7 23:34
+...

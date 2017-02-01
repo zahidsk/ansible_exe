@@ -1,0 +1,8 @@
+--
+- hosts:all
+ #remote_user: shaikhzahid
+  task:
+    - name:copy file to calsoft
+     copy:
+	src:~/wait_ansible.py 
+	dest:~/sk_ansible/
